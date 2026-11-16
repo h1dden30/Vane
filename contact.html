@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
-<title>Contact | Vane</title>
+<title>Start a case | Vane</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#F4F2EE}
 a{color:#0F1115}a:hover{color:#1F5A4A}
+.esc-hint{display:none}
+@media (hover:hover) and (pointer:fine){.esc-hint{display:inline}}
 </style>
 </head>
 <body>
@@ -20,7 +22,7 @@ a{color:#0F1115}a:hover{color:#1F5A4A}
 
 <div style="background: #0F1115; color: #F4F2EE;">
 <div style="max-width: 1120px; margin: 0 auto; padding: 10px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: 14px;">
-<span>If you're on a shared or monitored device, use a private window. Press Esc or use this button to leave quickly.</span>
+<span>On a shared or watched phone or computer? Use a private window.<span class="esc-hint"> Press Esc to leave fast.</span></span>
 <a href="https://weather.com" data-quick-exit style="text-decoration: none; background: #F4F2EE; color: #0F1115; padding: 12px 18px; border-radius: 6px; font-weight: 600;">Leave this site</a>
 </div>
 </div>
@@ -33,8 +35,8 @@ a{color:#0F1115}a:hover{color:#1F5A4A}
 </a>
 <nav style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; font-size: 15px;">
 <a href="index.html" style="text-decoration: none;">Home</a>
-<a href="index.html" style="text-decoration: none;">Pricing</a>
-<a href="index.html" style="text-decoration: none;">FAQ</a>
+<a href="index.html#pricing" style="text-decoration: none;">Pricing</a>
+<a href="index.html#faq" style="text-decoration: none;">FAQ</a>
 </nav>
 </div>
 </header>
@@ -42,50 +44,62 @@ a{color:#0F1115}a:hover{color:#1F5A4A}
 <section style="max-width: 1120px; margin: 0 auto; padding: 64px 32px 80px; display: flex; flex-wrap: wrap; gap: 48px;">
 
 <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
-<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -1px;">Contact us</h1>
-<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #33363D;">Tell us a little about what you need and we'll reply within two business days. Healthcare organizations can use this form to set up a call.</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 44px; line-height: 1.1; letter-spacing: -1px;">Start a case</h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #33363D;">Tell us what's going on and when we can call. We'll reach out within one business day.</p>
+<ol style="margin: 0; padding-left: 20px; font-size: 16px; line-height: 1.8; color: #33363D;">
+<li>We call and confirm it's you</li>
+<li>We start finding and removing your listings</li>
+<li>You get a report, and we keep checking</li>
+</ol>
 <div style="background: #EAF2EE; border-radius: 10px; padding: 22px;">
 <h2 style="margin: 0 0 8px; font-size: 17px;">Before you send this</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #33363D;">If someone may be watching your email or phone, don't use this form. Ask your advocate to reach out for you, or use a device and email address the other person can't access.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #33363D;">If someone may be watching your phone or email, use a device they can't access, or ask your advocate to contact us for you.</p>
 </div>
 <div style="border-top: 1px solid #D9D5CC; padding-top: 20px; font-size: 15px; line-height: 1.8; color: #33363D;">
-<div>Email: hello@getvane.com</div>
-<div>Advocates and partner organizations: partners@getvane.com</div>
+<div>Organizations and advocates: partners@getvane.com</div>
+<div>Everything else: hello@getvane.com</div>
 </div>
-<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #5A5E66;">Vane is not an emergency service. If you're in danger, call 911. National Domestic Violence Hotline: 1-800-799-7233.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #5A5E66;">Vane is not an emergency service. If you're in danger, call 911.</p>
 </div>
 
 <form style="flex: 1 1 480px; min-width: 0; background: #FFFFFF; border: 1px solid #D9D5CC; border-radius: 10px; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<label for="c-type" style="font-size: 15px; font-weight: 600;">This is for</label>
+<select id="c-type" style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115;">
+<option>Me. I've been threatened or harassed.</option>
+<option>My household</option>
+<option>Staff at my organization</option>
+<option>Someone I'm advocating for</option>
+<option>Something else</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<label for="c-what" style="font-size: 15px; font-weight: 600;">What happened? (a sentence or two is enough)</label>
+<textarea id="c-what" rows="4" placeholder="Organizations: tell us roughly how many employees." style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115;"></textarea>
+</div>
 <div style="display: flex; flex-direction: column; gap: 8px;">
 <label for="c-name" style="font-size: 15px; font-weight: 600;">Name</label>
 <input id="c-name" type="text" placeholder="A first name or nickname is fine" style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115;">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px;">
-<label for="c-reach" style="font-size: 15px; font-weight: 600;">How should we reach you?</label>
-<input id="c-reach" type="text" placeholder="Email or phone number" style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115;">
+<label for="c-reach" style="font-size: 15px; font-weight: 600;">Safest way to reach you</label>
+<input id="c-reach" type="text" placeholder="Phone or email" style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115;">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px;">
-<label for="c-type" style="font-size: 15px; font-weight: 600;">I'm contacting you as</label>
-<select id="c-type" style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115;">
-<option>A healthcare organization</option>
-<option>A healthcare worker</option>
-<option>An individual or household</option>
-<option>A survivor</option>
-<option>An advocate or partner organization</option>
-<option>Something else</option>
+<label for="c-when" style="font-size: 15px; font-weight: 600;">Best time for a call</label>
+<select id="c-when" style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115;">
+<option>Morning (9 to 12)</option>
+<option>Afternoon (12 to 5)</option>
+<option>Evening (5 to 8)</option>
+<option>Email me instead</option>
 </select>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<label for="c-msg" style="font-size: 15px; font-weight: 600;">Message</label>
-<textarea id="c-msg" rows="6" placeholder="For healthcare teams, roughly how many employees?" style="font-family: inherit; font-size: 16px; padding: 14px; border: 1px solid #B9B4A8; border-radius: 6px; background: #FFFFFF; color: #0F1115; resize: vertical;"></textarea>
 </div>
 <div style="display: flex; gap: 10px; align-items: flex-start;">
 <input id="c-safe" type="checkbox" style="width: 20px; height: 20px; margin-top: 2px;">
-<label for="c-safe" style="font-size: 15px; line-height: 1.5; color: #33363D;">Don't leave voicemails or send texts. Only contact me the way I listed above.</label>
+<label for="c-safe" style="font-size: 15px; line-height: 1.5; color: #33363D;">Don't leave voicemails or send texts. Only contact me the way I listed.</label>
 </div>
-<button type="button" disabled aria-disabled="true" style="align-self: flex-start; font-family: inherit; font-size: 16px; font-weight: 600; background: #1F5A4A; color: #FFFFFF; border: 0; padding: 15px 26px; border-radius: 6px; cursor: pointer;">Send message</button>
-<p style="margin: 0; font-size: 14px; color: #8A4B00;">Preview only: this form doesn't send yet.</p>
-<p style="margin: 0; font-size: 14px; color: #5A5E66;">We only use what you send here to reply to you.</p>
+<button type="button" disabled aria-disabled="true" style="align-self: flex-start; font-family: inherit; font-size: 16px; font-weight: 600; background: #1F5A4A; color: #FFFFFF; border: 0; padding: 15px 26px; border-radius: 6px; cursor: pointer;">Request a call</button>
+<p style="margin: 0; font-size: 14px; color: #5A5E66;">We only use what you send here to work on your case.</p>
 </form>
 
 </section>
